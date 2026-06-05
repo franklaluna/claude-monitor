@@ -5,10 +5,12 @@ import AppKit
 final class MenuBuilder {
     private weak var target: NSObject?
     private let selector: Selector
+    private let showDetailsSelector: Selector
 
-    init(target: NSObject, toggleLoginSelector: Selector) {
+    init(target: NSObject, toggleLoginSelector: Selector, showDetailsSelector: Selector) {
         self.target = target
         self.selector = toggleLoginSelector
+        self.showDetailsSelector = showDetailsSelector
     }
 
     func build(result: PollResult) -> NSMenu {
@@ -98,6 +100,15 @@ final class MenuBuilder {
     // MARK: - Footer
 
     private func buildFooter(menu: NSMenu) {
+        let detailItem = NSMenuItem(
+            title: "Show Details…",
+            action: showDetailsSelector,
+            keyEquivalent: ""
+        )
+        detailItem.target = target
+        menu.addItem(detailItem)
+        menu.addItem(.separator())
+
         let launchItem = NSMenuItem(
             title: "Launch at Login",
             action: selector,

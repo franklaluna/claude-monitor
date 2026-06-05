@@ -19,6 +19,8 @@ swiftc \
     "$SOURCES/SystemMonitor.swift" \
     "$SOURCES/ProcessDetector.swift" \
     "$SOURCES/MenuBuilder.swift" \
+    "$SOURCES/DetailWindowController.swift" \
+    "$SOURCES/TouchBarManager.swift" \
     "$SOURCES/MenuBarController.swift" \
     "$SOURCES/main.swift" \
     -o "$MACOS_DIR/$APP_NAME" \
