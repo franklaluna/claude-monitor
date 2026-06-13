@@ -1,37 +1,44 @@
-# claudeMonitor
+# ClaudeMonitor — Claude Code 状态监控工具
 
-#### 介绍
-claude code状态展示窗口
+macOS 菜单栏应用，实时监控 Claude Code 运行状态。
 
-#### 软件架构
-软件架构说明
+## 技术栈
 
+| 项 | 技术 |
+|---|------|
+| 语言 | Swift |
+| 框架 | AppKit, Foundation |
+| 构建 | swiftc (whole-module optimization) |
+| 平台 | macOS |
 
-#### 安装教程
+## 功能
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+- **菜单栏常驻** — 状态栏图标实时显示 Claude Code 状态
+- **进程检测** — 自动检测 Claude Code 进程运行状态
+- **详情窗口** — 点击展开详细信息面板
+- **Touch Bar** — 支持 Touch Bar 显示状态
+- **原生应用** — 打包为 .app 原生 macOS 应用
 
-#### 使用说明
+## 快速开始
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### 构建
+```bash
+chmod +x build.sh
+./build.sh
+```
 
-#### 参与贡献
+### 运行
+```bash
+open ClaudeMonitor.app
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## 项目结构
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```
+ClaudeMonitor/
+├── Sources/           # Swift 源码
+├── Info.plist         # 应用配置
+├── AppIcon.icns       # 应用图标
+├── build.sh           # 构建脚本
+└── README.md
+```
